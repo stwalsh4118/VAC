@@ -7,7 +7,7 @@ d = exp(1)^(j*2*(pi/3));
 %% 4)
 x = 1/(1+exp(-(a-15)/6));
 y = (sqrt(a)+(b^(1/21)))^pi;
-%z ??? lol
+z = (log(real((c+d)*(c-d))*sin(a*pi/3)))/(c*conj(c));
 
 %% 8)
 figure;
