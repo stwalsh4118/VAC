@@ -19,5 +19,3 @@ xlabel('Time(s)');
 ylabel('Function Value');
 title('Sin and Cos Functions');
 legend('Sin','Cos');
-
-
