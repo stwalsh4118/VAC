@@ -20,12 +20,15 @@ int main() {
 		if (!loggedIn) {
 			cout << "Register?(0) or Login?(1) or Exit(2)" << endl;
 			cin >> userInput;
+
+			//Login Sequence
 			if (userInput == 1) {
 				cout << "Login" << endl << "Username: ";
 				cin >> username;
 				cout << endl << "Password: ";
 				cin >> password;
 				int i = 0;
+				//checks if a username is in the database
 				while ((username != usernames[i]) && (i < 1000)) {
 					i++;
 				}
@@ -33,6 +36,7 @@ int main() {
 					loggedIn = false;
 					cout << "Log In Failed" << endl;
 				}
+				//checks if the password entered is the right one for the username
 				else if (password == passwords[i]) {
 					loggedIn = true;
 					cout << "Logged In Successfully" << endl;
@@ -42,6 +46,7 @@ int main() {
 					cout << "Log In Failed" << endl;
 				}
 			}
+			//registers new username and password to the database
 			else if(userInput==0) {
 				cout << "Enter new username(case sensitive): ";
 				cin >> username;
