@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pointerEx1.cpp">
+    <ClCompile Include="Anagram Finder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

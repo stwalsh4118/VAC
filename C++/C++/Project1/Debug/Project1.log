@@ -1,2 +1,6 @@
-﻿  pointerEx2.cpp
+﻿  Anagram Finder.cpp
+c:\users\sean\documents\github\vac\c++\c++\project1\anagram finder.cpp(14): warning C4018: '<': signed/unsigned mismatch
+c:\users\sean\documents\github\vac\c++\c++\project1\anagram finder.cpp(15): warning C4018: '<': signed/unsigned mismatch
+c:\users\sean\documents\github\vac\c++\c++\project1\anagram finder.cpp(23): warning C4018: '<': signed/unsigned mismatch
+c:\users\sean\documents\github\vac\c++\c++\project1\anagram finder.cpp(24): warning C4018: '<': signed/unsigned mismatch
   Project1.vcxproj -> C:\Users\Sean\Documents\GitHub\VAC\C++\C++\Debug\Project1.exe
