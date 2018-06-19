@@ -52,9 +52,5 @@ int main() {
 		cout << "The words entered are not anagrams.";
 	cin >> a;
 	
-
-
-	
-
 	return 0;
 }
