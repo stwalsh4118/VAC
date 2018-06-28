@@ -1,5 +1,4 @@
 #include<iostream>
-#include<iomanip>
 using namespace std;
 const int n = 3;
 const int mrow = 3;
@@ -17,7 +16,7 @@ void printMatrix(float A[][mcol]) {
 }
 
 void pivotMatrix(float A[][4]) {
-	for (int i = 0;i<n;i++)                    //Pivotisation
+	for (int i = 0;i<n;i++)                   
 		for (int k = i + 1;k<n;k++)
 			if (abs(A[i][i])<abs(A[k][i]))
 				for (int j = 0;j <= n;j++)
