@@ -1,3 +1,3 @@
-﻿  thomasAlgorithm.cpp
-c:\users\sean\documents\github\vac\c++\c++\project1\thomasalgorithm.cpp(64): warning C4018: '<': signed/unsigned mismatch
+﻿  GaussElimination.cpp
+c:\users\sean\documents\github\vac\c++\c++\project1\gausselimination.cpp(47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Project1.vcxproj -> C:\Users\Sean\Documents\GitHub\VAC\C++\C++\Debug\Project1.exe
