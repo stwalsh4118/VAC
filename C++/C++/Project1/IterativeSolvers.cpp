@@ -2,10 +2,29 @@
 #include <math.h>
 using namespace std;
 
-const int mrow = 3;
-const int mcol = 4;
+const int mrow = 2;
+const int mcol = 3;
 
-void Jacobi(double A[][4], double &x, double &y, double &z) {
+double roundOff(double input, int n) {
+	double output = 0;
+	output = roundf(input * pow(10, n)) / pow(10, n);
+	return output;
+}
+
+double roundUp(double input, int n) {
+	double output = 0;
+	output = ceilf(input * pow(10, n)) / pow(10, n);
+	return output;
+}
+
+double roundDown(double input, int n) {
+	double output = 0;
+	output = floorf(input * pow(10, n)) / pow(10, n);
+	return output;
+}
+
+
+void Jacobi(double A[][mcol], double &x, double &y, double &z) {
 	double xp1, yp1, zp1;
 	int it = 0;
 	double err = 100;
@@ -48,6 +67,7 @@ void JacobiGeneral(double A[][mcol],double b[mrow]) {
 			}
 			current += A[r][mcol - 1];
 			current /= A[r][r];
+			//roundOff(current, 2);
 			temp[r] = current;
 		}
 		for (int i = 0;i < mrow;i++) {
@@ -60,7 +80,7 @@ void JacobiGeneral(double A[][mcol],double b[mrow]) {
 	cout << "Iterations: " << it << endl;
 }
 
-void GaussSiedel(double A[][4], double &x, double &y, double &z) {
+void GaussSiedel(double A[][mcol], double &x, double &y, double &z) {
 	double xp1 = x, yp1 = y, zp1 = z;
 	int it = 0;
 	double err = 100;
@@ -102,6 +122,7 @@ void GaussSiedelGeneral(double A[][mcol], double b[mrow]) {
 			}
 			current += A[r][mcol - 1];
 			current /= A[r][r];
+			//roundOff(current, 2);
 			b[r] = current;
 		}
 		for (int i = 0;i < mrow;i++) {
@@ -120,21 +141,20 @@ int main() {
 	x = 2.8, y = -2, z =6;
 
 
-	double A[3][4] = { { 3,-.1,-.2,7.85 },
-					   { .1,7,-.3,-19.3 },
-					   { .3,-.2,10,71.4 } };
-	double b[3] = {2.8,-2,6};
-	Jacobi(A, x,y,z);
-	cout << "Values from Jacobi: " << endl << "X: " << x << " Y: " << y << " Z: " << z << endl;
-	x = 2.8, y = -2, z = 6;
-	GaussSiedel(A, x, y, z);
-	cout << "Values from GaussSiedel" << endl << "X:" << x << " Y: " << y << " Z: " << z << endl;
+	double A[mrow][mcol] = { {0.1036,0.2122,0.7381},
+							 {0.2081,0.4247,0.9327} };
+	double b[mrow] = {0,0};
+	//Jacobi(A, x,y,z);
+	//cout << "Values from Jacobi: " << endl << "X: " << x << " Y: " << y << " Z: " << z << endl;
+	//x = 2.8, y = -2, z = 6;
+	//GaussSiedel(A, x, y, z);
+	//cout << "Values from GaussSiedel" << endl << "X:" << x << " Y: " << y << " Z: " << z << endl;
 	JacobiGeneral(A, b);
 	cout << "Values from JacobiGeneral: " << endl;
 	for (int i = 0;i < mrow;i++) {
 		cout << "X" << i+1 << ": " << b[i] << endl;
 	}
-	double c[3] = { 2.8,-2,6 };
+	double c[3] = {0,0};
 	GaussSiedelGeneral(A, c);
 	cout << "Values from GaussSiedelGeneral: " << endl;
 	for (int i = 0;i < mrow;i++) {

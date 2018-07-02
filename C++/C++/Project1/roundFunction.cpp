@@ -2,21 +2,21 @@
 #include <math.h>
 using namespace std;
 
-double roundOff(double input) {
+double roundOff(double input, int n) {
 	double output = 0;
-	output = roundf(input * 100) / 100;
+	output = roundf(input * pow(10,n)) / pow(10, n);
 	return output;
 }
 
-double roundUp(double input) {
+double roundUp(double input, int n) {
 	double output = 0;
-	output = ceilf(input * 100) / 100;
+	output = ceilf(input * pow(10, n)) / pow(10, n);
 	return output;
 }
 
-double roundDown(double input) {
+double roundDown(double input, int n) {
 	double output = 0;
-	output = floorf(input * 100) / 100;
+	output = floorf(input * pow(10, n)) / pow(10, n);
 	return output;
 }
 

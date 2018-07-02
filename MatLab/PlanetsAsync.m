@@ -56,12 +56,18 @@ for i = 1:n
     body_x = bodies{i,1}(1); body_y = bodies{i,2}(1); body_vx = bodies{i,3}; body_vy = bodies{i,4}; body_h = bodies{i,6};
     while(t<bodies{i,5})
     body_gx = ((-G*MS*body_x)/(sqrt(body_x^2+body_y^2))^3);
+    if(i == 3)
+    disp(body_gx);
+    end
     body_gy = ((-G*MS*body_y)/(sqrt(body_x^2+body_y^2))^3);
     body_x = body_x+((1/2)*((body_vx)+(body_vx+(body_h*(body_gx)))))*body_h;
     body_y = body_y+((1/2)*((body_vy)+(body_vy+(body_h*(body_gy)))))*body_h;
     body_gx1 = ((-G*MS*body_x)/(sqrt(body_x^2+body_y^2))^3);
     body_gy1 = ((-G*MS*body_y)/(sqrt(body_x^2+body_y^2))^3);
     body_vx = body_vx+((1/2)*(body_gx+body_gx1))*body_h;
+    if(i == 3)
+    %disp(body_vx);
+    end
     body_vy = body_vy+((1/2)*(body_gy+body_gy1))*body_h;
     
     if(mod(t,86400)==0)

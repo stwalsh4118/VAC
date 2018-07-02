@@ -1,1 +1,8 @@
-﻿  Project1.vcxproj -> C:\Users\Sean\Documents\GitHub\VAC\C++\C++\Debug\Project1.exe
+﻿  IterativeSolvers.cpp
+c:\users\sean\documents\github\vac\c++\c++\project1\iterativesolvers.cpp(10): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\sean\documents\github\vac\c++\c++\project1\iterativesolvers.cpp(16): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\sean\documents\github\vac\c++\c++\project1\iterativesolvers.cpp(22): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\sean\documents\github\vac\c++\c++\project1\iterativesolvers.cpp(140): warning C4101: 'xp1': unreferenced local variable
+c:\users\sean\documents\github\vac\c++\c++\project1\iterativesolvers.cpp(140): warning C4101: 'zp1': unreferenced local variable
+c:\users\sean\documents\github\vac\c++\c++\project1\iterativesolvers.cpp(140): warning C4101: 'yp1': unreferenced local variable
+  Project1.vcxproj -> C:\Users\Sean\Documents\GitHub\VAC\C++\C++\Debug\Project1.exe
